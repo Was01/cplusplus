@@ -3,19 +3,20 @@
 
 using namespace std;
 
+
 void foo(int *n){
 	*n=20;
 }
 
 int main(){
-	int *vet=new int[10];
-    for (int i=0;i<6;i++){
-    	cout<< "Digite um numero: ";
- 		cin >> *(vet+i);
-	}
+	int v[]={1,1,2,3,5,8};
+	int *vet=&v[0];
+	int i=0;
 
-	for (int i=0;i<6;i++){
-		cout<<*(vet+i)<<endl;
+	while(i<6){
+		cout<<*vet<<' ';
+		i++;
+		vet++;
 	}
 	delete [] vet;
 	vet=NULL;
