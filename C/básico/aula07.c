@@ -9,10 +9,10 @@ int main(){
 	scanf("%d",&b);
 	getchar();
 	if(a<b){
-		printf("%d eh maior que %d.\n",a,b);
+		printf("%d eh menor que %d.\n",a,b);
 	}
 	else if(b<a){
-			printf("%d eh maior que %d.\n",b,a);
+			printf("%d eh menor que %d.\n",b,a);
 		}
 		else {
 			printf("%d eh igual a %d.\n",a,b);
