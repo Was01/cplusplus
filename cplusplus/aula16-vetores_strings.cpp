@@ -1,18 +1,17 @@
 #include<iostream>
+#include<string.h>
 
 using namespace std;
 
 void inverte(char nome[]){
 	int tam,i;
-	for(tam=0;nome[tam];tam++){
-		
-	}
+	tam=strlen(nome);
     for(i=tam-1;i>=0;i--)
     	cout<<nome[i];
 }
 
 int main(){
-	char nome[]="Maria";
+	char nome[]="Amanda";
 	inverte(nome);
 	return 0;
 }
