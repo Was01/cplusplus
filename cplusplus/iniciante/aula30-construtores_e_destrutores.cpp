@@ -9,11 +9,13 @@ class Pessoa
 	protected:
 		char nome[100];
 		int idade;
-		
+		int * filhos;
     public:
-    	Pessoa(char nome [],int idade){
+    	Pessoa(const char* nome,int idade){
 			strcpy(this->nome,nome);
 			this->idade=idade;
+			filhos=new int[10];
+			cout<<"Entrou no construtor..."<<nome<<endl;
 		}
 		
 		void getNome(){
@@ -23,13 +25,19 @@ class Pessoa
 		void getIdade(){
 			cout<<"Idade: "<<this->idade<<" anos."<<endl;
 		}
+		~Pessoa(){
+			cout<<"Entrou no destrutor..."<<nome<<endl;
+			delete[] filhos;
+		}
     
 };
 
 int main(){
-	char nome[]="Washington Fernandes de Barros";
-	Pessoa p(nome,41);
-	p.getNome();
-	p.getIdade();
+	Pessoa  p[3]=
+	{	
+		{"Washington",41},{"Suelen",32},{"Samara",29}
+	};
+	
+
 	return 0;
 }
